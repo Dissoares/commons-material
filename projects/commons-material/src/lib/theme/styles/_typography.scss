@@ -1,0 +1,12 @@
+@use '@angular/material' as mat;
+
+$cm-typography: mat.define-theme(
+  (
+    typography: (
+      use-system-variables: true,
+      system-variables-prefix: cm,
+      brand-family: 'Roboto, sans-serif',
+      plain-family: 'Roboto, sans-serif',
+    ),
+  )
+);

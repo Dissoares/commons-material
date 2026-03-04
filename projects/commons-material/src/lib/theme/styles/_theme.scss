@@ -1,0 +1,41 @@
+@use '@angular/material' as mat;
+@use './palettes' as palettes;
+
+$cm-light-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: palettes.$cm-primary-palette,
+      tertiary: palettes.$cm-tertiary-palette,
+      use-system-variables: true,
+      system-variables-prefix: cm,
+    ),
+    density: (
+      scale: 0,
+    ),
+  )
+);
+
+$cm-dark-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: palettes.$cm-primary-palette,
+      tertiary: palettes.$cm-tertiary-palette,
+      use-system-variables: true,
+      system-variables-prefix: cm,
+    ),
+    density: (
+      scale: 0,
+    ),
+  )
+);
+
+@mixin commons-material-theme($theme: $cm-light-theme) {
+  @include mat.core-theme($theme);
+  @include mat.all-component-themes($theme);
+}
+
+@mixin commons-material-dark-theme() {
+  @include commons-material-theme($cm-dark-theme);
+}
