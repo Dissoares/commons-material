@@ -36,6 +36,8 @@ function extrairMapa(nomeConstante) {
 
 const espacamentos = extrairMapa('cmEspacamento');
 const raios = extrairMapa('cmRaio');
+const coresLight = extrairMapa('cmCoresLight');
+const coresDark = extrairMapa('cmCoresDark');
 
 const linhas = [
   '// Arquivo gerado automaticamente por tools/gerar-tokens-scss.cjs',
@@ -44,6 +46,13 @@ const linhas = [
   ...espacamentos.map((item) => `  --${item.chave}: ${item.valor};`),
   '',
   ...raios.map((item) => `  --${item.chave}: ${item.valor};`),
+  '',
+  ...coresLight.map((item) => `  --${item.chave}: ${item.valor};`),
+  '}',
+  '',
+  ":root[data-cm-theme='dark'],",
+  '.cm-theme-dark {',
+  ...coresDark.map((item) => `  --${item.chave}: ${item.valor};`),
   '}',
   '',
 ];

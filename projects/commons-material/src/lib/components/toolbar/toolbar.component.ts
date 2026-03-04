@@ -43,9 +43,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
       gap: var(--cm-space-3, 0.75rem);
-      background: var(--cm-surface, #fff);
-      color: var(--cm-on-surface, #1a1b1f);
-      border-bottom: 1px solid var(--cm-outline-variant, #d9d9d9);
+      background: var(--cm-color-bg-toolbar, #005a52);
+      color: var(--cm-color-brand-contrast, #ffffff);
+      border-bottom: 1px solid var(--cm-color-border, #cfd6df);
     }
 
     .cm-toolbar--densa {
@@ -80,13 +80,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
     .cm-toolbar__titulo {
       font: var(--cm-typescale-title-medium, 600 1rem/1.25rem Roboto, sans-serif);
-      color: var(--cm-on-surface, #1a1b1f);
+      color: var(--cm-color-brand-contrast, #ffffff);
       white-space: nowrap;
     }
 
     .cm-toolbar__subtitulo {
       font: var(--cm-typescale-body-small, 400 0.75rem/1rem Roboto, sans-serif);
-      color: var(--cm-on-surface-variant, #5a5e66);
+      color: var(--cm-color-brand-contrast, #ffffff);
+      opacity: 0.85;
       white-space: nowrap;
     }
 
