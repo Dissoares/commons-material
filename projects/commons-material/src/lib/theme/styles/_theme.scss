@@ -2,12 +2,12 @@
 @use './palettes' as palettes;
 @use './typography' as typography;
 
-$cm-light-theme: mat.define-theme(
+$dissoares-light-theme: mat.define-theme(
   (
     color: (
       theme-type: light,
-      primary: palettes.$cm-primary-palette,
-      tertiary: palettes.$cm-tertiary-palette,
+      primary: palettes.$dissoares-primary-palette,
+      tertiary: palettes.$dissoares-tertiary-palette,
       use-system-variables: true,
       system-variables-prefix: cm,
     ),
@@ -18,12 +18,12 @@ $cm-light-theme: mat.define-theme(
   )
 );
 
-$cm-dark-theme: mat.define-theme(
+$dissoares-dark-theme: mat.define-theme(
   (
     color: (
       theme-type: dark,
-      primary: palettes.$cm-primary-palette,
-      tertiary: palettes.$cm-tertiary-palette,
+      primary: palettes.$dissoares-primary-palette,
+      tertiary: palettes.$dissoares-tertiary-palette,
       use-system-variables: true,
       system-variables-prefix: cm,
     ),
@@ -34,11 +34,22 @@ $cm-dark-theme: mat.define-theme(
   )
 );
 
-@mixin commons-material-theme($theme: $cm-light-theme) {
+@mixin dissoares-theme($theme: $dissoares-light-theme) {
   @include mat.core-theme($theme);
   @include mat.all-component-themes($theme);
 }
 
+@mixin dissoares-dark-theme() {
+  @include dissoares-theme($dissoares-dark-theme);
+}
+
+$cm-light-theme: $dissoares-light-theme;
+$cm-dark-theme: $dissoares-dark-theme;
+
+@mixin commons-material-theme($theme: $cm-light-theme) {
+  @include dissoares-theme($theme);
+}
+
 @mixin commons-material-dark-theme() {
-  @include commons-material-theme($cm-dark-theme);
+  @include dissoares-dark-theme();
 }
