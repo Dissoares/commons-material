@@ -1,9 +1,9 @@
-import { PageSectionComponent } from '@dissoares/commons-material';
+import { PageSectionComponent, ToolbarComponent } from '@dissoares/commons-material';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [PageSectionComponent],
+  imports: [PageSectionComponent, ToolbarComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
