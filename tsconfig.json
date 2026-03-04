@@ -4,7 +4,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "commons-material": ["./dist/commons-material"]
+      "commons-material": ["./dist/commons-material"],
+      "@dissoares/commons-material": ["./projects/commons-material/src/public-api.ts"],
+      "@dissoares/commons-material/*": ["./projects/commons-material/src/*"]
     },
     "strict": true,
     "noImplicitOverride": true,
@@ -33,6 +35,9 @@
     },
     {
       "path": "./projects/commons-material/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/playground/tsconfig.app.json"
     }
   ]
 }

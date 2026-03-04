@@ -8,9 +8,12 @@
     "prebuild": "npm run tokens:sync",
     "build:watch": "ng build commons-material --watch --configuration development",
     "build:prod": "ng build commons-material --configuration production",
+    "playground:start": "ng serve playground",
+    "playground:build": "ng build playground --configuration development",
     "pretest": "npm run tokens:sync",
     "test": "ng test commons-material",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "serve:ssr:playground": "node dist/playground/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -34,16 +37,22 @@
     "@angular/forms": "^20.3.0",
     "@angular/material": "^20.2.14",
     "@angular/platform-browser": "^20.3.0",
+    "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
+    "@angular/ssr": "^20.3.18",
+    "express": "^5.1.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular/build": "^20.3.18",
     "@angular/cli": "^20.3.15",
     "@angular/compiler-cli": "^20.3.0",
     "@eslint/js": "^9.32.0",
+    "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^20.17.19",
     "angular-eslint": "^20.3.0",
     "eslint": "^9.32.0",
     "jasmine-core": "~5.9.0",
@@ -53,7 +62,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^20.3.0",
-    "typescript-eslint": "^8.38.0",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.38.0"
   }
 }

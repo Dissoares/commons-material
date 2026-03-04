@@ -1,0 +1,17 @@
+.playground {
+  min-height: 100vh;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  background: var(--cm-surface, #f7f8fa);
+}
+
+h1 {
+  margin: 0;
+  font: var(--cm-typescale-headline-small, 600 1.5rem/2rem Roboto, sans-serif);
+  color: var(--cm-on-surface, #1a1b1f);
+}
+
+p {
+  margin: 0;
+}
