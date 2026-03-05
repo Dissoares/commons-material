@@ -1,0 +1,21 @@
+<div class="layout-sistema" [class.layout-sistema--sidebar-fechada]="!sidebarOpen">
+  <header class="layout-sistema__cabecalho">
+    <ng-content select="[cmLayoutHeader]"></ng-content>
+  </header>
+
+  <aside
+    class="layout-sistema__barra-lateral"
+    [id]="sidebarId"
+    [attr.aria-label]="sidebarAriaLabel"
+  >
+    <ng-content select="[cmLayoutSidebar]"></ng-content>
+  </aside>
+
+  <main class="layout-sistema__conteudo">
+    <ng-content select="[cmLayoutContent]"></ng-content>
+  </main>
+
+  <footer class="layout-sistema__rodape">
+    <ng-content select="[cmLayoutFooter]"></ng-content>
+  </footer>
+</div>

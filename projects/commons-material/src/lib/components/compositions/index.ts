@@ -1,2 +1,1 @@
-// Componentes compostos por primitives e servicos.
-export {};
+export * from './layout-system/layout-system.component';

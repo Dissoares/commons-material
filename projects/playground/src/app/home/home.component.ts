@@ -2,18 +2,25 @@ import { HomeContentComponent } from './components/home-content/home-content.com
 import { HomeSidebarComponent } from './components/home-sidebar/home-sidebar.component';
 import { HomeFooterComponent } from './components/home-footer/home-footer.component';
 import { HomeHeaderComponent } from './components/home-header/home-header.component';
+import { LayoutSystemComponent } from '@dissoares/commons-material';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  imports: [HomeHeaderComponent, HomeSidebarComponent, HomeContentComponent, HomeFooterComponent],
+  imports: [
+    LayoutSystemComponent,
+    HomeHeaderComponent,
+    HomeSidebarComponent,
+    HomeContentComponent,
+    HomeFooterComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  sidebarOpen = true;
+  public sidebarAberta: boolean = true;
 
-  toggleSidebar(): void {
-    this.sidebarOpen = !this.sidebarOpen;
+  public abrirSidebar(): void {
+    this.sidebarAberta = !this.sidebarAberta;
   }
 }
