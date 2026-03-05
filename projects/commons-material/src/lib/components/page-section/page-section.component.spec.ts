@@ -18,7 +18,7 @@ describe('PageSectionComponent', () => {
     fixture.componentRef.setInput('titulo', 'Seção principal');
     fixture.detectChanges();
 
-    const titulo = fixture.nativeElement.querySelector('.cm-page-section__title') as HTMLElement;
+    const titulo = fixture.nativeElement.querySelector('.cm-secao-pagina__titulo') as HTMLElement;
 
     expect(titulo.textContent?.trim()).toBe('Seção principal');
   });
@@ -27,7 +27,7 @@ describe('PageSectionComponent', () => {
     fixture.componentRef.setInput('titulo', 'Seção principal');
     fixture.detectChanges();
 
-    const subtitulo = fixture.nativeElement.querySelector('.cm-page-section__subtitle');
+    const subtitulo = fixture.nativeElement.querySelector('.cm-secao-pagina__subtitulo');
 
     expect(subtitulo).toBeNull();
   });
@@ -38,7 +38,7 @@ describe('PageSectionComponent', () => {
     fixture.detectChanges();
 
     const subtitulo = fixture.nativeElement.querySelector(
-      '.cm-page-section__subtitle',
+      '.cm-secao-pagina__subtitulo',
     ) as HTMLElement;
 
     expect(subtitulo.textContent?.trim()).toBe('Contexto adicional');

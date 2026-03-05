@@ -1,0 +1,12 @@
+<section class="cm-secao-pagina">
+  <header class="cm-secao-pagina__cabecalho">
+    <h2 class="cm-secao-pagina__titulo">{{ titulo() }}</h2>
+    @if (subtitulo()) {
+      <p class="cm-secao-pagina__subtitulo">{{ subtitulo() }}</p>
+    }
+  </header>
+
+  <div class="cm-secao-pagina__conteudo">
+    <ng-content />
+  </div>
+</section>
