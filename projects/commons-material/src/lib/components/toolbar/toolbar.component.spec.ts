@@ -19,8 +19,8 @@ describe('ToolbarComponent', () => {
     fixture.componentRef.setInput('subtitulo', 'Ambiente multiempresa');
     fixture.detectChanges();
 
-    const titulo = fixture.nativeElement.querySelector('.cm-toolbar__titulo') as HTMLElement;
-    const subtitulo = fixture.nativeElement.querySelector('.cm-toolbar__subtitulo') as HTMLElement;
+    const titulo = fixture.nativeElement.querySelector('.cm-barra-ferramentas__titulo') as HTMLElement;
+    const subtitulo = fixture.nativeElement.querySelector('.cm-barra-ferramentas__subtitulo') as HTMLElement;
 
     expect(titulo.textContent?.trim()).toBe('Portal Corporativo');
     expect(subtitulo.textContent?.trim()).toBe('Ambiente multiempresa');
@@ -30,8 +30,8 @@ describe('ToolbarComponent', () => {
     fixture.componentRef.setInput('densa', true);
     fixture.detectChanges();
 
-    const toolbar = fixture.nativeElement.querySelector('.cm-toolbar') as HTMLElement;
+    const toolbar = fixture.nativeElement.querySelector('.cm-barra-ferramentas') as HTMLElement;
 
-    expect(toolbar.classList.contains('cm-toolbar--densa')).toBeTrue();
+    expect(toolbar.classList.contains('cm-barra-ferramentas--densa')).toBeTrue();
   });
 });

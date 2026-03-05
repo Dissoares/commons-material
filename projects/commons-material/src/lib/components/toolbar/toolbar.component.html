@@ -1,0 +1,24 @@
+<mat-toolbar class="cm-barra-ferramentas" [class.cm-barra-ferramentas--densa]="densa()">
+  <div class="cm-barra-ferramentas__area cm-barra-ferramentas__area--inicio">
+    <ng-content select="[cmBarraInicio], [cmToolbarInicio], [slot='inicio']" />
+  </div>
+
+  <div class="cm-barra-ferramentas__area cm-barra-ferramentas__area--centro">
+    @if (titulo() || subtitulo()) {
+      <div class="cm-barra-ferramentas__titulos">
+        @if (titulo()) {
+          <span class="cm-barra-ferramentas__titulo">{{ titulo() }}</span>
+        }
+        @if (subtitulo()) {
+          <small class="cm-barra-ferramentas__subtitulo">{{ subtitulo() }}</small>
+        }
+      </div>
+    } @else {
+      <ng-content select="[cmBarraCentro], [cmToolbarCentro], [slot='centro']" />
+    }
+  </div>
+
+  <div class="cm-barra-ferramentas__area cm-barra-ferramentas__area--fim">
+    <ng-content select="[cmBarraFim], [cmToolbarFim], [slot='fim']" />
+  </div>
+</mat-toolbar>
