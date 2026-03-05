@@ -1,0 +1,140 @@
+.container-painel {
+  padding: var(--cm-space-4, 1rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grade-metricas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--cm-space-4, 1rem);
+  margin-bottom: var(--cm-space-6, 1.5rem);
+}
+
+.cartao-metrica {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cartao-metrica:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cartao-metrica.primary {
+  border-left: 4px solid var(--cm-color-info, #1d4ed8);
+}
+
+.cartao-metrica.success {
+  border-left: 4px solid var(--cm-color-success, #2e7d32);
+}
+
+.cartao-metrica.warning {
+  border-left: 4px solid var(--cm-color-warning, #b45309);
+}
+
+.cartao-metrica.danger {
+  border-left: 4px solid var(--cm-color-danger, #c62828);
+}
+
+.cabecalho-metrica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--cm-space-3, 0.75rem);
+}
+
+.icone-metrica {
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.valor-metrica {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--cm-color-text-primary, #1a1b1f);
+}
+
+.titulo-metrica {
+  margin: 0 0 var(--cm-space-2, 0.5rem) 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--cm-color-text-primary, #1a1b1f);
+}
+
+.descricao-metrica {
+  margin: 0;
+  color: var(--cm-color-text-secondary, #5a5e66);
+  font-size: 0.875rem;
+}
+
+.grade-acoes {
+  display: flex;
+  gap: var(--cm-space-3, 0.75rem);
+  flex-wrap: wrap;
+}
+
+.grade-acoes button {
+  display: flex;
+  align-items: center;
+  gap: var(--cm-space-2, 0.5rem);
+}
+
+.lista-atividades {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cm-space-3, 0.75rem);
+}
+
+.item-atividade {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--cm-space-3, 0.75rem);
+  padding: var(--cm-space-3, 0.75rem);
+  background: var(--cm-color-bg-surface, #fff);
+  border-radius: var(--cm-radius-md, 0.75rem);
+  border: 1px solid var(--cm-color-border, #d9d9d9);
+}
+
+.icone-atividade {
+  color: var(--cm-color-brand, #00695f);
+  margin-top: 2px;
+}
+
+.conteudo-atividade {
+  flex: 1;
+}
+
+.conteudo-atividade h4 {
+  margin: 0 0 var(--cm-space-1, 0.25rem) 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cm-color-text-primary, #1a1b1f);
+}
+
+.conteudo-atividade p {
+  margin: 0 0 var(--cm-space-1, 0.25rem) 0;
+  font-size: 0.875rem;
+  color: var(--cm-color-text-secondary, #5a5e66);
+}
+
+.tempo-atividade {
+  color: var(--cm-color-text-secondary, #5a5e66);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .grade-metricas {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-acoes {
+    flex-direction: column;
+  }
+
+  .grade-acoes button {
+    justify-content: flex-start;
+  }
+}

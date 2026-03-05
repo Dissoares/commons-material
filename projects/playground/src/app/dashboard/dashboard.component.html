@@ -1,0 +1,57 @@
+<cm-barra-ferramentas titulo="Dashboard" subtitulo="Visao geral do sistema">
+    <button mat-icon-button cmBarraInicio (click)="voltar()">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <cm-alternador-tema cmBarraFim></cm-alternador-tema>
+</cm-barra-ferramentas>
+
+<div class="container-painel">
+    <cm-secao-pagina titulo="Metricas Principais" subtitulo="Indicadores em tempo real">
+        <div class="grade-metricas">
+            @for (metric of metrics(); track metric.titulo) {
+            <mat-card class="cartao-metrica" [class]="metric.cor">
+                <mat-card-content>
+                    <div class="cabecalho-metrica">
+                        <mat-icon class="icone-metrica">{{ metric.icone }}</mat-icon>
+                        <span class="valor-metrica">{{ metric.valor }}</span>
+                    </div>
+                    <h3 class="titulo-metrica">{{ metric.titulo }}</h3>
+                    <p class="descricao-metrica">{{ metric.descricao }}</p>
+                </mat-card-content>
+            </mat-card>
+            }
+        </div>
+    </cm-secao-pagina>
+
+    <cm-secao-pagina titulo="Acoes Rapidas" subtitulo="Atalhos para tarefas comuns">
+        <div class="grade-acoes">
+            <button mat-raised-button color="primary" (click)="novoUsuario()">
+                <mat-icon>person_add</mat-icon>
+                Novo Usuario
+            </button>
+            <button mat-raised-button color="accent" (click)="gerarRelatorio()">
+                <mat-icon>assessment</mat-icon>
+                Gerar Relatorio
+            </button>
+            <button mat-raised-button color="warn" (click)="limparCache()">
+                <mat-icon>clear_all</mat-icon>
+                Limpar Cache
+            </button>
+        </div>
+    </cm-secao-pagina>
+
+    <cm-secao-pagina titulo="Atividade Recente" subtitulo="Ultimas acoes do sistema">
+        <div class="lista-atividades">
+            @for (activity of activities(); track activity.id) {
+            <div class="item-atividade">
+                <mat-icon class="icone-atividade">{{ activity.icone }}</mat-icon>
+                <div class="conteudo-atividade">
+                    <h4>{{ activity.titulo }}</h4>
+                    <p>{{ activity.descricao }}</p>
+                    <small class="tempo-atividade">{{ activity.tempo }}</small>
+                </div>
+            </div>
+            }
+        </div>
+    </cm-secao-pagina>
+</div>

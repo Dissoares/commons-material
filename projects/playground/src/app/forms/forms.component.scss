@@ -1,0 +1,113 @@
+.container-formularios {
+  padding: var(--cm-space-4, 1rem);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formulario-usuario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cm-space-4, 1rem);
+}
+
+.grade-formulario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--cm-space-4, 1rem);
+}
+
+.campo-formulario {
+  width: 100%;
+}
+
+.campo-caixa-selecao {
+  display: flex;
+  align-items: center;
+  padding: var(--cm-space-2, 0.5rem) 0;
+}
+
+.acoes-formulario {
+  display: flex;
+  gap: var(--cm-space-2, 0.5rem);
+  justify-content: flex-end;
+}
+
+.acoes-formulario button {
+  display: flex;
+  align-items: center;
+  gap: var(--cm-space-1, 0.25rem);
+}
+
+.lista-usuarios {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cm-space-3, 0.75rem);
+}
+
+.cartao-usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--cm-space-4, 1rem);
+  background: var(--cm-color-bg-surface, #fff);
+  border-radius: var(--cm-radius-md, 0.75rem);
+  border: 1px solid var(--cm-color-border, #d9d9d9);
+  transition: box-shadow 0.2s ease;
+}
+
+.cartao-usuario:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.informacoes-usuario h3 {
+  margin: 0 0 var(--cm-space-1, 0.25rem) 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cm-color-text-primary, #1a1b1f);
+}
+
+.informacoes-usuario p {
+  margin: 0 0 var(--cm-space-1, 0.25rem) 0;
+  color: var(--cm-color-text-secondary, #5a5e66);
+  font-size: 0.875rem;
+}
+
+.detalhes-usuario {
+  font-size: 0.75rem;
+  color: var(--cm-color-text-secondary, #5a5e66);
+}
+
+.acoes-usuario {
+  display: flex;
+  gap: var(--cm-space-1, 0.25rem);
+}
+
+.estado-vazio {
+  text-align: center;
+  padding: var(--cm-space-8, 2rem);
+  color: var(--cm-color-text-secondary, #5a5e66);
+}
+
+.estado-vazio mat-icon {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: var(--cm-space-2, 0.5rem);
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .grade-formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao-usuario {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--cm-space-2, 0.5rem);
+  }
+
+  .acoes-usuario {
+    align-self: flex-end;
+  }
+}
