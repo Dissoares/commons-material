@@ -19,8 +19,12 @@ describe('ToolbarComponent', () => {
     fixture.componentRef.setInput('subtitulo', 'Ambiente multiempresa');
     fixture.detectChanges();
 
-    const titulo = fixture.nativeElement.querySelector('.cm-barra-ferramentas__titulo') as HTMLElement;
-    const subtitulo = fixture.nativeElement.querySelector('.cm-barra-ferramentas__subtitulo') as HTMLElement;
+    const titulo = fixture.nativeElement.querySelector(
+      '.cm-barra-ferramentas__titulo',
+    ) as HTMLElement;
+    const subtitulo = fixture.nativeElement.querySelector(
+      '.cm-barra-ferramentas__subtitulo',
+    ) as HTMLElement;
 
     expect(titulo.textContent?.trim()).toBe('Portal Corporativo');
     expect(subtitulo.textContent?.trim()).toBe('Ambiente multiempresa');

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ThemeToggleComponent } from './theme-toggle.component';
 import { ThemeService } from '../../core/services/theme.service';
+import { ThemeToggleComponent } from './theme-toggle.component';
 import { By } from '@angular/platform-browser';
 
 describe('ThemeToggleComponent', () => {
@@ -16,9 +16,7 @@ describe('ThemeToggleComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [ThemeToggleComponent],
-      providers: [
-        { provide: ThemeService, useValue: spy },
-      ],
+      providers: [{ provide: ThemeService, useValue: spy }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ThemeToggleComponent);
