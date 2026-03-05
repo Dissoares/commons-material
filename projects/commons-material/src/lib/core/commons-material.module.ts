@@ -1,5 +1,6 @@
 import { PageSectionComponent } from '../components/page-section/page-section.component';
 import { ToolbarComponent } from '../components/toolbar/toolbar.component';
+import { ThemeToggleComponent } from '../components/theme-toggle/theme-toggle.component';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import {
   ConfiguracaoCommonsMaterial,
@@ -7,8 +8,8 @@ import {
 } from './providers/commons-material.providers';
 
 @NgModule({
-  imports: [PageSectionComponent, ToolbarComponent],
-  exports: [PageSectionComponent, ToolbarComponent],
+  imports: [PageSectionComponent, ToolbarComponent, ThemeToggleComponent],
+  exports: [PageSectionComponent, ToolbarComponent, ThemeToggleComponent],
 })
 export class CommonsMaterialModule {
   static forRoot(

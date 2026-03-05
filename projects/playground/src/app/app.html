@@ -1,7 +1,7 @@
 <main class="playground">
     <cm-toolbar titulo="Commons Material" subtitulo="Playground de componentes">
         <button cmToolbarInicio class="acao">☰</button>
-        <button cmToolbarFim class="acao">Entrar</button>
+        <cm-theme-toggle cmToolbarFim></cm-theme-toggle>
     </cm-toolbar>
 
     <h1>Playground da biblioteca</h1>
@@ -17,6 +17,16 @@
             Este micro sistema serve para validar visualmente os componentes, tokens e tema da
             <strong>@dissoares/commons-material</strong>.
         </p>
+    </cm-page-section>
+
+    <cm-page-section titulo="Sistema de Temas" subtitulo="Dark/Light mode funcional">
+        <p>
+            O <strong>cm-theme-toggle</strong> permite alternar entre temas claro e escuro com persistência no localStorage.
+        </p>
+        <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem;">
+            <cm-theme-toggle></cm-theme-toggle>
+            <span>Clique no ícone para alternar o tema</span>
+        </div>
     </cm-page-section>
 
     <cm-page-section titulo="Provider global" subtitulo="Ripple e configurações da biblioteca">

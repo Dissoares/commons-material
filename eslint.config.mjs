@@ -1,6 +1,6 @@
-import eslint from '@eslint/js';mport eslint from '@eslint/js';
+import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import angular from 'angular-eslint';mport eslint from '@eslint/js';mport eslint from '@eslint/js';
+import angular from 'angular-eslint';
 
 export default tseslint.config(
   {
