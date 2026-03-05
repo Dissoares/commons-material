@@ -19,17 +19,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { Component, inject, signal } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { Usuario } from '../core/interfaces';
 import { Router } from '@angular/router';
-
-interface Usuario {
-  id?: number;
-  nome: string;
-  email: string;
-  cargo: string;
-  departamento: string;
-  dataAdmissao: Date;
-  ativo: boolean;
-}
 
 @Component({
   selector: 'app-formulario',
@@ -56,15 +47,15 @@ export class FormularioComponent {
   private readonly router = inject(Router);
 
   readonly usuarioForm: FormGroup = this.fb.group({
-    nome: ['', [Validators.required, Validators.minLength(3)]],
-    email: ['', [Validators.required, Validators.email]],
-    cargo: ['', Validators.required],
-    departamento: ['', Validators.required],
+    nome: [null, [Validators.required, Validators.minLength(3)]],
+    email: [null, [Validators.required, Validators.email]],
+    cargo: [null, Validators.required],
+    departamento: [null, Validators.required],
     dataAdmissao: [new Date(), Validators.required],
     ativo: [true],
   });
 
-  readonly usuarios = signal<Usuario[]>([
+  readonly usuarios = signal<Array<Usuario>>([
     {
       id: 1,
       nome: 'Ana Silva',
