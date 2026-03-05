@@ -7,15 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { Component, inject, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MetricasCard } from '../core/interfaces';
 import { Router } from '@angular/router';
-
-interface MetricCard {
-  titulo: string;
-  valor: string;
-  descricao: string;
-  icone: string;
-  cor: 'primary' | 'success' | 'warning' | 'danger';
-}
 
 @Component({
   selector: 'app-dashboard',
@@ -33,7 +26,7 @@ interface MetricCard {
 export class DashboardComponent {
   private readonly router = inject(Router);
 
-  readonly metrics = signal<MetricCard[]>([
+  readonly metrics = signal<Array<MetricasCard>>([
     {
       titulo: 'Usuários Ativos',
       valor: '1,234',

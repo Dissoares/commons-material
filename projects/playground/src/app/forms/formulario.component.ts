@@ -32,7 +32,7 @@ interface Usuario {
 }
 
 @Component({
-  selector: 'app-forms',
+  selector: 'app-formulario',
   imports: [
     PageSectionComponent,
     ThemeToggleComponent,
@@ -48,10 +48,10 @@ interface Usuario {
     MatIconModule,
     FormsModule,
   ],
-  templateUrl: './forms.component.html',
-  styleUrl: './forms.component.scss',
+  templateUrl: './formulario.component.html',
+  styleUrl: './formulario.component.scss',
 })
-export class FormsComponent {
+export class FormularioComponent {
   private readonly fb = inject(FormBuilder);
   private readonly router = inject(Router);
 

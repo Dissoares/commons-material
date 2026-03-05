@@ -1,5 +1,5 @@
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FormsComponent } from './forms/forms.component';
+import { FormularioComponent } from './forms/formulario.component';
 import { HomeComponent } from './home/home.component';
 import { Routes } from '@angular/router';
 
@@ -14,7 +14,7 @@ export const routes: Routes = [
   },
   {
     path: 'forms',
-    component: FormsComponent,
+    component: FormularioComponent,
   },
   {
     path: '**',
