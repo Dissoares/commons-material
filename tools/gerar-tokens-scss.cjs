@@ -51,7 +51,7 @@ const linhas = [
   '}',
   '',
   ":root[data-cm-theme='dark'],",
-  '.cm-theme-dark {',
+  '.cm-tema-escuro {',
   ...coresDark.map((item) => `  --${item.chave}: ${item.valor};`),
   '}',
   '',

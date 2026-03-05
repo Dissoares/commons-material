@@ -16,6 +16,6 @@ body {
 }
 
 // Aplicar tema escuro quando necessário
-.cm-theme-dark {
+.cm-tema-escuro {
   @include cm-theme.commons-material-dark-theme();
 }

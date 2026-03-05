@@ -3,7 +3,7 @@ import { ModoTemaCommonsMaterial } from '../../tokens/css-vars';
 import { DOCUMENT } from '@angular/common';
 import { inject } from '@angular/core';
 
-export const CHAVE_TEMA_LOCALSTORAGE = 'cm-theme';
+export const CHAVE_TEMA_LOCALSTORAGE: string = 'cm-theme';
 
 @Injectable({
   providedIn: 'root',
@@ -49,10 +49,10 @@ export class ThemeService {
     const htmlElement = this.document.documentElement;
 
     if (tema === 'dark') {
-      htmlElement.classList.add('cm-theme-dark');
+      htmlElement.classList.add('cm-tema-escuro');
       htmlElement.setAttribute('data-cm-theme', 'dark');
     } else {
-      htmlElement.classList.remove('cm-theme-dark');
+      htmlElement.classList.remove('cm-tema-escuro');
       htmlElement.setAttribute('data-cm-theme', 'light');
     }
   }
@@ -70,6 +70,7 @@ export class ThemeService {
     try {
       localStorage.setItem(CHAVE_TEMA_LOCALSTORAGE, tema);
     } catch {
+      // Ignora erros quando o storage nao esta disponivel.
     }
   }
 
