@@ -1,0 +1,13 @@
+<button
+  mat-icon-button
+  (click)="themeService.alternarTema()"
+  [matTooltip]="tooltipText()"
+  matTooltipPosition="below"
+  aria-label="Alternar tema"
+>
+  @if (themeService.isDarkMode()) {
+    <mat-icon>light_mode</mat-icon>
+  } @else {
+    <mat-icon>dark_mode</mat-icon>
+  }
+</button>
