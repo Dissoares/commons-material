@@ -19,6 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Component, inject, signal } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 interface Usuario {
   id?: number;
@@ -52,6 +53,7 @@ interface Usuario {
 })
 export class FormsComponent {
   private readonly fb = inject(FormBuilder);
+  private readonly router = inject(Router);
 
   readonly usuarioForm: FormGroup = this.fb.group({
     nome: ['', [Validators.required, Validators.minLength(3)]],
@@ -96,7 +98,7 @@ export class FormsComponent {
   readonly departamentos = signal(['Tecnologia', 'Produto', 'Design', 'Marketing', 'Vendas', 'RH']);
 
   public voltar(): void {
-    console.log('Voltar para menu principal');
+    this.router.navigate(['/']);
   }
 
   public salvarUsuario(): void {

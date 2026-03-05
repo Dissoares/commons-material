@@ -6,7 +6,8 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface MetricCard {
   titulo: string;
@@ -30,6 +31,8 @@ interface MetricCard {
   styleUrl: './dashboard.component.scss',
 })
 export class DashboardComponent {
+  private readonly router = inject(Router);
+
   readonly metrics = signal<MetricCard[]>([
     {
       titulo: 'Usuários Ativos',
@@ -86,7 +89,7 @@ export class DashboardComponent {
   ]);
 
   public voltar(): void {
-    console.log('Voltar para menu principal');
+    this.router.navigate(['/']);
   }
 
   public novoUsuario(): void {
