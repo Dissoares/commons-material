@@ -1,0 +1,15 @@
+<cm-barra-ferramentas titulo="Portal Corporativo" subtitulo="Playground da biblioteca Commons">
+    <button
+        cmBarraInicio
+        class="botao-acao"
+        type="button"
+        aria-controls="sidebar-principal"
+        [attr.aria-expanded]="sidebarOpen"
+        (click)="onMenuClick()"
+    >
+        Menu
+    </button>
+    <div cmBarraFim class="acoes-cabecalho">
+        <cm-alternador-tema></cm-alternador-tema>
+    </div>
+</cm-barra-ferramentas>

@@ -1,0 +1,14 @@
+.botao-acao {
+  border: 1px solid var(--cm-color-border, #d9d9d9);
+  background: var(--cm-color-bg-surface, #fff);
+  color: var(--cm-color-text-primary, #1a1b1f);
+  border-radius: var(--cm-radius-sm, 0.5rem);
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+}
+
+.acoes-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: var(--cm-space-2, 0.5rem);
+}
