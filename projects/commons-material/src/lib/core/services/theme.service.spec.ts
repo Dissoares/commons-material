@@ -56,8 +56,8 @@ describe('ThemeService', () => {
   });
 
   it('deve alternar de volta para tema claro', () => {
-    service.alternarTema(); // Para dark
-    service.alternarTema(); // Para light
+    service.alternarTema();
+    service.alternarTema();
 
     expect(service.temaAtual()).toBe('light');
     expect(service.isLightMode()).toBe(true);

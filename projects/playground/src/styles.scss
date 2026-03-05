@@ -15,7 +15,6 @@ body {
   font-family: var(--mdc-typography-body1-font-family, Roboto, sans-serif);
 }
 
-// Aplicar tema escuro quando necessário
 .cm-tema-escuro {
   @include cm-theme.commons-material-dark-theme();
 }

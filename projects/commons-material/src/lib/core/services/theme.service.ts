@@ -10,14 +10,10 @@ export const CHAVE_TEMA_LOCALSTORAGE: string = 'cm-theme';
 })
 export class ThemeService {
   private readonly document = inject(DOCUMENT);
-
   private readonly _temaAtual = signal<ModoTemaCommonsMaterial>('light');
-
-  readonly temaAtual = this._temaAtual.asReadonly();
-
-  readonly isDarkMode = computed(() => this._temaAtual() === 'dark');
-
-  readonly isLightMode = computed(() => this._temaAtual() === 'light');
+  public readonly temaAtual = this._temaAtual.asReadonly();
+  public readonly isDarkMode = computed(() => this._temaAtual() === 'dark');
+  public readonly isLightMode = computed(() => this._temaAtual() === 'light');
 
   constructor() {
     this.inicializarTema();
@@ -27,12 +23,12 @@ export class ThemeService {
     });
   }
 
-  alternarTema(): void {
+  public alternarTema(): void {
     const novoTema = this._temaAtual() === 'light' ? 'dark' : 'light';
     this.definirTema(novoTema);
   }
 
-  definirTema(tema: ModoTemaCommonsMaterial): void {
+  public definirTema(tema: ModoTemaCommonsMaterial): void {
     this._temaAtual.set(tema);
     this.salvarTemaNoLocalStorage(tema);
   }
@@ -67,11 +63,7 @@ export class ThemeService {
   }
 
   private salvarTemaNoLocalStorage(tema: ModoTemaCommonsMaterial): void {
-    try {
-      localStorage.setItem(CHAVE_TEMA_LOCALSTORAGE, tema);
-    } catch {
-      // Ignora erros quando o storage nao esta disponivel.
-    }
+    localStorage.setItem(CHAVE_TEMA_LOCALSTORAGE, tema);
   }
 
   private obterPreferenciaDoSistema(): ModoTemaCommonsMaterial {

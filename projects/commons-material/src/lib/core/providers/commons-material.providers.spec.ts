@@ -1,5 +1,3 @@
-import { CONFIGURACAO_COMMONS_MATERIAL, proverCommonsMaterial } from './commons-material.providers';
-import { MAT_RIPPLE_GLOBAL_OPTIONS, type RippleGlobalOptions } from '@angular/material/core';
 import {
   type MatFormFieldDefaultOptions,
   MAT_FORM_FIELD_DEFAULT_OPTIONS,
@@ -9,6 +7,8 @@ import {
   MAT_TOOLTIP_DEFAULT_OPTIONS,
 } from '@angular/material/tooltip';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS, type MatSnackBarConfig } from '@angular/material/snack-bar';
+import { CONFIGURACAO_COMMONS_MATERIAL, proverCommonsMaterial } from './commons-material.providers';
+import { MAT_RIPPLE_GLOBAL_OPTIONS, type RippleGlobalOptions } from '@angular/material/core';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 

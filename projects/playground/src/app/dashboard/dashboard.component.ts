@@ -4,9 +4,9 @@ import {
   ToolbarComponent,
 } from '@dissoares/commons-material';
 import { MatButtonModule } from '@angular/material/button';
+import { Component, inject, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 
 interface MetricCard {
