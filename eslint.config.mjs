@@ -1,10 +1,10 @@
+import eslint from '@eslint/js';mport eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import angular from 'angular-eslint';
-import eslint from '@eslint/js';
+import angular from 'angular-eslint';mport eslint from '@eslint/js';mport eslint from '@eslint/js';
 
 export default tseslint.config(
   {
-    ignores: ['dist/**', 'out-tsc/**', 'coverage/**', 'node_modules/**'],
+    ignores: ['dist/**', 'out-tsc/**', 'coverage/**', 'node_modules/**', '.angular/**'],
   },
   {
     files: ['**/*.ts'],

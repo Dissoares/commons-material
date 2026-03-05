@@ -3,13 +3,13 @@
   padding: 0 2rem 2rem;
   display: grid;
   gap: 1rem;
-  background: var(--cm-surface, #f7f8fa);
+  background: var(--cm-color-bg-page, #f7f8fa);
 }
 
 .acao {
-  border: 1px solid var(--cm-outline-variant, #d9d9d9);
-  background: var(--cm-surface, #fff);
-  color: var(--cm-on-surface, #1a1b1f);
+  border: 1px solid var(--cm-color-border, #d9d9d9);
+  background: var(--cm-color-bg-surface, #fff);
+  color: var(--cm-color-text-primary, #1a1b1f);
   border-radius: var(--cm-radius-sm, 0.5rem);
   padding: 0.25rem 0.75rem;
   cursor: pointer;
@@ -18,7 +18,7 @@
 h1 {
   margin: 0;
   font: var(--cm-typescale-headline-small, 600 1.5rem/2rem Roboto, sans-serif);
-  color: var(--cm-on-surface, #1a1b1f);
+  color: var(--cm-color-text-primary, #1a1b1f);
 }
 
 p {

@@ -26,9 +26,9 @@ import { ChangeDetectionStrategy, Component, type InputSignal, input } from '@an
       display: grid;
       gap: var(--cm-space-4, 1rem);
       padding: var(--cm-space-5, 1.25rem);
-      background: var(--cm-surface, #fff);
+      background: var(--cm-color-bg-surface, #fff);
       border-radius: var(--cm-radius-md, 0.75rem);
-      border: 1px solid var(--cm-outline-variant, #d9d9d9);
+      border: 1px solid var(--cm-color-border, #d9d9d9);
     }
 
     .cm-page-section__header {
@@ -39,13 +39,13 @@ import { ChangeDetectionStrategy, Component, type InputSignal, input } from '@an
     .cm-page-section__title {
       margin: 0;
       font: var(--cm-typescale-title-medium, 600 1.125rem/1.5rem Roboto, sans-serif);
-      color: var(--cm-on-surface, #1a1b1f);
+      color: var(--cm-color-text-primary, #1a1b1f);
     }
 
     .cm-page-section__subtitle {
       margin: 0;
       font: var(--cm-typescale-body-medium, 400 0.875rem/1.25rem Roboto, sans-serif);
-      color: var(--cm-on-surface-variant, #5a5e66);
+      color: var(--cm-color-text-secondary, #5a5e66);
     }
   `,
 })
