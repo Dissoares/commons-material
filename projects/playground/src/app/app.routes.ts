@@ -13,7 +13,7 @@ export const routes: Routes = [
     component: DashboardComponent,
   },
   {
-    path: 'forms',
+    path: 'formulario',
     component: FormularioComponent,
   },
   {
